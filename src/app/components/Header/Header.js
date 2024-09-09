@@ -1,5 +1,5 @@
 
-
+'use client'
 import React, { useState } from 'react';
 import Button from '../Button/Button.js';
 //import './Header.css';
@@ -16,7 +16,7 @@ function Header() {
   
 
   return (
-    <div id="header " className="bg-black  text-lime-500 font-bold  flex justify-between p-3 items-center">
+    <div id="header " className="text-yellow-900 bg-cream-500 font-bold  flex justify-between p-3 items-center">
       <IoMenuSharp></IoMenuSharp>
       <div className='flex gap-6 '>
       <a href="">Home</a><a href="">Recipes</a><a href="">Collections</a>

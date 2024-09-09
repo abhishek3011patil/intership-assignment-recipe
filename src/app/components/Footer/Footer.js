@@ -1,4 +1,4 @@
-
+'use client'
 
 
 import React from 'react'
@@ -10,17 +10,17 @@ import { FaGithub } from "react-icons/fa";
 function Footer() {
   return (
 
-    <div className='Footer bg-black text-lime-500 font-medium flex flex-col justify-center items-center gap-4'>
+    <div className='Footer  bg-green-500 font-medium flex flex-col justify-center items-center gap-4'>
 
 
       <div className="pageLinksSection flex flex-col justify-center items-center gap-2">
-        <p>Useful links:</p>
+        <p className=' text-orange-400 font-bold' >Useful links:</p>
 
-        <div className="pageLinks flex gap-5  ">
+        <div className="pageLinks  flex gap-5  ">
 
-          <a className="text-white hover:text-lime-500" href="">Home</a>
-          <a className=" text-white hover:text-lime-500" href="">Playlist Generator</a>
-          <a className=" text-white hover:text-lime-500" href="">Contact</a>
+          <a className="text-white hover:bg-green-500" href="">Home</a>
+          <a className=" text-white hover:bg-green-500" href="">Recipe</a>
+          <a className=" text-white hover:bg-green-500" href="">Contact</a>
 
         </div>
 
@@ -28,19 +28,19 @@ function Footer() {
 
       <div className="iconSection flex flex-col justify-center items-center gap-2 ">
 
-        <p className=''>Also Contact Us on:</p>
+        <p className=' text-orange-400 font-bold'>Also Contact Us on:</p>
 
         <div className="iconsList text bold text-white flex gap-5 ">
-          <CiInstagram className='hover:text-lime-500' size={40} />
-          <CiFacebook className='hover:text-lime-500' size={40} />
-          <CiLinkedin className='hover:text-lime-500' size={40} />
-          <FaGithub className='hover:text-lime-500' size={40} />
+          <CiInstagram className='hover:bg-green-500' size={40} />
+          <CiFacebook className='hover:bg-green-500' size={40} />
+          <CiLinkedin className='hover:bg-green-500' size={40} />
+          <FaGithub className='hover:bg-green-500' size={40} />
         </div>
 
       </div>
       {/* <Form></Form> */}
 
-      <p> &#169;2024 Abhishek Patil </p>
+      <p className=' text-orange-400 font-bold'> &#169;2024 Abhishek Patil </p>
     </div>
   )
 }
