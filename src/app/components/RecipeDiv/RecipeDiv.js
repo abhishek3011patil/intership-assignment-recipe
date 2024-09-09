@@ -21,6 +21,8 @@ const RecipeList = () => {
     image: ''
   });
 
+  
+
   // Fetch recipes from server
   useEffect(() => {
     fetch('http://localhost:5000/api/recipes') // Fetch from your Express server
@@ -113,9 +115,11 @@ const RecipeList = () => {
   // Handle delete recipe
   const handleDelete = (id) => {
     fetch(`http://localhost:5000/api/recipes/${id}`, {
-      method: 'DELETE'
+      method: 'DELETE',
     })
-    .then(() => {
+    .then(response => response.json())
+    .then(data => {
+      // Refresh or update the list of recipes
       setRecipes(prevRecipes => prevRecipes.filter(recipe => recipe._id !== id));
     })
     .catch(error => console.error('Error deleting recipe:', error));
@@ -287,9 +291,7 @@ const RecipeList = () => {
           {filteredRecipes.length > 0 ? (
             filteredRecipes.map((recipe) => (
               <RecipeCard
-                key={recipe._id}
-                recipe={recipe}
-                onDelete={() => handleDelete(recipe._id)}
+              key={recipe._id} recipe={recipe} onDelete={handleDelete}
               />
             ))
           ) : (

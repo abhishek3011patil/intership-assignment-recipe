@@ -19,7 +19,7 @@ const getRandomBlockColor = () => {
   return colors[Math.floor(Math.random() * colors.length)];
 };
 
-const RecipeCard = ({ recipe }) => {
+const RecipeCard = ({ recipe, onDelete }) => {
   if (!recipe) return null; // Handle undefined recipe
 
   return (
@@ -52,6 +52,13 @@ const RecipeCard = ({ recipe }) => {
               <li key={index} className="text-gray-700">{instruction}</li>
             ))}
           </ol>
+          {/* Delete Button */}
+          <button
+            onClick={() => onDelete(recipe._id)}
+            className="mt-4 bg-red-500 text-white rounded p-2 w-full"
+          >
+            Delete Recipe
+          </button>
         </div>
       </div>
     </div>
