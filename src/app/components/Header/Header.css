@@ -1,0 +1,122 @@
+:root {
+  --green: #3cb428;
+  --thatWhite: #e8effd;
+  --lightGreen: #ecfde8;
+  --thatyellow: #F0CD13;
+  --font1: "Roboto Condensed", sans-serif;
+  --whitefade: #F6F6F6;
+  --black: #212121;
+  --white: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 3rem;
+  margin-left: 1rem;
+}
+
+.mainHeader {
+  min-height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--black);
+  font-size: 1.75rem;
+  padding: 0px 4px;
+}
+
+.mainHeader a {
+  text-decoration: none;
+  max-width: 100vh;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.mainHeader ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10rem;
+}
+
+.mainHeader button {
+  padding: 10px;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+  .mainHeader {
+    display: none;
+  }
+  #header {
+    margin: 0;
+    padding: 0;
+  }
+  .mobileMenu {
+    display: block;
+  }
+  .blankMenu {
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .blankMenu .logo {
+    max-width: 3rem;
+    max-height: 3rem;
+    margin-left: 1rem;
+  }
+  .menuExpanded {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: start;
+    background-color: var(--black);
+  }
+  .menuExpanded ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .menuExpanded a {
+    text-decoration: none;
+    max-width: 100vh;
+    color: var(--white);
+    font-weight: 700;
+  }
+  .menuExpanded li {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: start;
+    margin-left: 2rem;
+  }
+}
+/* for tablet devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  #header ul, Button {
+    font-size: 1.2rem;
+  }
+  .mobileMenu {
+    display: none;
+  }
+}
+/* For desktop devices */
+@media only screen and (min-width: 1025px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  #hometitlediv h1 {
+    font-size: 5.5rem;
+  }
+  #hometitlediv h3 {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=Header.css.map */

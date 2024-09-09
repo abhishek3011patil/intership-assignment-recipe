@@ -1,0 +1,81 @@
+.Footer{
+  padding: 10px 0;
+  min-width: 100%;
+  background-color: var(--black);
+  font-size: 1.3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.pageLinks{
+ 
+display: flex;
+gap: 30px   ;
+margin-top: 1rem;
+margin-bottom: 2rem;
+
+    a{
+        text-decoration: none;
+        
+        font-size: 1.5rem;
+        font-weight: 400 ;
+        color: white;
+    }
+} 
+
+.iconSection, .pageLinksSection{
+  p{
+    color: var(--green);
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+}
+
+
+
+.iconsList{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+  .pageLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+  }
+
+  .iconsList{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 5px;
+  }
+
+}
+
+/* for tablet devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+}
+  
+
+
+/* For laptop devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+}
+
+/* For desktop devices */
+@media only screen and (min-width: 1025px) {
+
+}
+
+
+
